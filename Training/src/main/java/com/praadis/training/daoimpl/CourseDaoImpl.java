@@ -36,7 +36,7 @@ public class CourseDaoImpl implements CourseDao {
 	}
 
 	public List<Course> findAllCourseUL(Integer lower,Integer upper) {
-	return sessionFactory.getCurrentSession().createQuery("from Course  desc").setFirstResult(lower).setMaxResults(upper).list();
+	return sessionFactory.getCurrentSession().createQuery("from Course").setFirstResult(lower).setMaxResults(upper).list();
 	} 
 	
 }

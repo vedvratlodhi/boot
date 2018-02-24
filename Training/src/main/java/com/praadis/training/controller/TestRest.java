@@ -28,12 +28,12 @@ public class TestRest {
 	 
 	 @RequestMapping(value = "/restl", method = RequestMethod.GET, produces = "application/json")
 	    public List<Course> getEmployeeIJSON() {
-	       return courseDao.findAllCourse();
+	       return courseDao.findAllCourseUL(0,20);
 	    }
-	 @RequestMapping(value = "/restl", method = RequestMethod.GET, produces = "application/json")
+	 @RequestMapping(value = "/rest2", method = RequestMethod.GET, produces = "application/json")
 	 public List<Course> getEmployeeIJSO( @RequestParam Integer lower , @RequestParam Integer upper)
 	 {
-		return null;
+		return courseDao.findAllCourseUL(lower ,upper);
 		 
 	 }
 }

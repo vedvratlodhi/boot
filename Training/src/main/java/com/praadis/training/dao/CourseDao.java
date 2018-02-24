@@ -8,4 +8,5 @@ public interface CourseDao {
 
 	public List<Course> findAllCourse(); 
 	public Boolean saveandupdate(Course course);
+	public List<Course> findAllCourseUL(Integer lower,Integer upper);
 }
